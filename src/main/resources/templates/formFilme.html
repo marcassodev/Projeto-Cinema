@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head><title>Novo Filme</title></head>
+    <body>
+        <h1>Cadastrar Filme</h1>
+        <form th:action="@{/filmes}" th:object="${filme}" method="post">
+            Título: <input type="text" th:field="*{titulo}"/><br/>
+            Sinopse: <input type="text" th:field="*{sinopse}"/><br/>
+            Gênero: <input type="text" th:field="*{genero}"/><br/>
+            Ano: <input type="number" th:field="*{anoLancamento}"/><br/>
+            <button type="submit">Salvar</button>
+        </form>
+    </body>
+</html>
