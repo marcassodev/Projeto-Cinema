@@ -1,12 +1,30 @@
 package com.projeto_casaCultural.cinema.model;
 
-public class Analise {
-        Long id;
-        String comentario;
-        double nota;
-        Filme filme;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
-    public Analise() {}
+@Entity
+public class Analise {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long id;
+
+    String comentario;
+    double nota;
+
+    @JsonBackReference
+    @ManyToOne
+    @JoinColumn(name = "filme_id")
+    Filme filme;
+
+    public Analise() {
+    }
 
     public Filme getFilme() {
         return filme;
@@ -30,7 +48,7 @@ public class Analise {
 
     public void setComentario(String comentario) {
         this.comentario = comentario;
-    } 
+    }
 
     public double getNota() {
         return nota;
@@ -47,7 +65,4 @@ public class Analise {
         this.nota = nota;
     }
 
-    
-        
-        
 }

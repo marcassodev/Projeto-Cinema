@@ -5,26 +5,11 @@
 package com.projeto_casaCultural.cinema.repositorio;
 
 import com.projeto_casaCultural.cinema.model.Filme;
-import java.util.ArrayList;
-import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public class FilmeRepository {
-    private static List<Filme> filmes = new ArrayList<>();
-    private static long contadorId = 1L;
 
-    public static List<Filme> listarTodos() {
-        return filmes;
-    }
+@Repository
+public interface FilmeRepository extends JpaRepository<Filme, Long> { 
 
-    public static void salvar(Filme filme) {
-    filme.setId(contadorId++);    
-    filmes.add(filme);
-    }
-
-    public static Filme buscarPorId(Long id) {
-        return filmes.stream()
-                .filter(f -> f.getId().equals(id))
-                .findFirst()
-                .orElse(null);
-    } 
 }
