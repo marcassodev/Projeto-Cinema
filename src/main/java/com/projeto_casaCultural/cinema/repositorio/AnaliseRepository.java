@@ -6,24 +6,12 @@ package com.projeto_casaCultural.cinema.repositorio;
 
 import com.projeto_casaCultural.cinema.model.Analise;
 import com.projeto_casaCultural.cinema.model.Filme;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 
-public class AnaliseRepository {
-    private static List<Analise> analises = new ArrayList<>();
-    private static Long contadorId = 1L;
-
-    public static List<Analise> listarPorFilme(Filme filme) {
-        return analises.stream()
-                .filter(a -> a.getFilme().getId().equals(filme.getId()))
-                .collect(Collectors.toList());
-    }
-
-    public static Analise salvar(Analise analise) {
-        analise.setId(contadorId++);
-        analises.add(analise);
-        return analise;
-    }
+@Repository
+public interface AnaliseRepository extends JpaRepository<Analise, Long> { 
+        List<Analise> findByFilme(Filme filme);
 }
