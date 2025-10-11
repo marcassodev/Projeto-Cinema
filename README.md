@@ -2,17 +2,19 @@
 
 (Projeto em andamento, sendo realizadas suas atualizações)
 
-Um Projeto de um sistema web spring boot para um determinado cinema, com criação de filmes, realização de comentarios, atualizaões e etc. Ainda não sendo utilizado 100%, mas, ja possui um pequeno sistema CRUD. 
+Um Projeto de um sistema web spring boot para um determinado cinema, com criação de filmes, realização de comentarios, atualizaões e etc. Possui um pequeno sistema CRUD. Com uma classe apenas para a utilização de testes e requisições da API.
 
 São utilizados nesse projeto, criação de um serviço web com:
 - Spring MVC.
-- (Futuramente)Spring RESTful.
+- Spring RESTful.
 
 Ferramentas utilizadas: 
 - Linguagem BackEnd Java.
 - Linguagem FrontEnd HTML.
+- BootStrap
+- Postman
 - Spring Boot
-- (Futuramente) Linguagem CSS + Bootstrap.
-- (Futuramente) Banco de dados SQL (MYSQL).
+- Banco de dados SQL (MYSQL).
+- (Futuramente) Linguagem CSS.
 
-Irei futuramente realizar requisições em post e a utilização de API REST.
+Colocarei depois, nesse repositorio, a query para o banco de dados.
