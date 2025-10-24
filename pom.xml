@@ -13,6 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>cinema</name>
     <description>Demo project for Spring Boot</description>
+    <packaging>war</packaging> 
     <url/>
     <licenses>
         <license/>
@@ -75,6 +76,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
+        <finalName>${artifactId}</finalName>
     </build>
 
 </project>
