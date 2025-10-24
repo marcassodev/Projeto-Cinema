@@ -1,4 +1,4 @@
-package com.projeto_casaCultural.cinema.data;
+package com.projeto_casaCultural.cinema.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
